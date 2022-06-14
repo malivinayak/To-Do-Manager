@@ -13,8 +13,8 @@
 <body>
     <header>
         <h1>Task List</h1>
-        <form id="" new-task-form>
-            <input type="text" id="new-task-input" placeholder="What would you link to add!!" />
+        <form id="new-task-form">
+            <input type="text" name="new-task-input" id="new-task-input" placeholder="What would you link to add!!" />
             <input type="submit" id="new-task-submit" value="Add Task" />
         </form>
     </header>
@@ -24,14 +24,15 @@
             <h2>Tasks</h2>
 
             <div id="tasks">
-                <div class="content">
-                    <input type="text" class="text" value="My 1st task" readonly />
+                <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="My 1st task" readonly />
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">delete</button>
+                    </div>
                 </div>
-                <div class="actions">
-                    <button class="edit">Edit</button>
-                    <button class="delete">delete</button>
-                </div>
-
             </div>
         </section>
 
