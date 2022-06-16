@@ -22,6 +22,30 @@ body {
     color: #fff;
 }
 
+.greeting .title {
+    display: flex;
+}
+
+.greeting .title input {
+    margin-left: 0.5rem;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.greeting .title {
+    color: aquamarine;
+}
+
+.greeting .title input {
+    color: aqua;
+}
+
 header {
     padding: 2rem 1rem;
     max-width: 800px;
