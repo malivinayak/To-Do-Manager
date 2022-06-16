@@ -6,6 +6,8 @@
     --light: #eee;
     --pink: #ec4899;
     --purple: #8b5cf6;
+    --aqua1: #7fffd4;
+    --aqua: #00ffff;
 }
 
 * {
@@ -39,11 +41,11 @@ body {
 }
 
 .greeting .title {
-    color: aquamarine;
+    color: var(--aqua1);
 }
 
 .greeting .title input {
-    color: aqua;
+    color: var(--aqua);
 }
 
 header {
