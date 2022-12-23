@@ -1,0 +1,47 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --aqua1: #7fffd4;
+  --aqua: #00ffff;
+}
+
+.greeting{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.greeting .title {
+  display: flex;
+}
+
+.greeting .title input {
+  margin-left: 0.5rem;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.greeting .title {
+  color: var(--aqua1);
+}
+
+.greeting .title input {
+  color: var(--aqua);
+}
+
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
