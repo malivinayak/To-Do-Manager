@@ -1,10 +1,15 @@
 const nameInput = document.querySelector("#name");
 
 //local storage
-const username = localStorage.getItem("username") || "";
+const username = localStorage.getItem("username").trim() || "";
 nameInput.value = username;
 
 //Adding name to local storage
 nameInput.addEventListener("change", (e) => {
-  localStorage.setItem("username", e.target.value);
+  /**
+   * @type {string} name
+   */
+  let name = e.target.value.trim();
+  nameInput.value = name;
+  localStorage.setItem("username", name);
 });
