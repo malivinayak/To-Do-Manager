@@ -10,6 +10,11 @@
   --aqua: #00ffff;
 }
 
+.greeting{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
 .greeting .title {
   display: flex;
 }
