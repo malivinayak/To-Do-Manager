@@ -6,8 +6,11 @@ const alertClose = $("#alertClose");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  console.log(input.value);
-  if (input.value == "") {
+  /**
+   * @type {string} task
+   */
+  const task = input.value;
+  if (task.trim() == "") {
     alert.addClass("show");
     alert.removeClass("hide");
     alert.addClass("showAlert");
