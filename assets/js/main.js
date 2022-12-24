@@ -7,7 +7,11 @@ window.addEventListener("load", () => {
     e.preventDefault();
 
     if (input.value != "") {
+      /**
+       * @type {string} task
+       */
       const task = input.value;
+      task = task.trim();
 
       const task_el = document.createElement("div");
       task_el.classList.add("task");
