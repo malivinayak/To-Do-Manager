@@ -5,10 +5,12 @@ window.addEventListener("load", () => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    if (input.value != "") {
-      const task = input.value;
-
+    /**
+     * @type {string} task
+     */
+    let task = input.value;
+    task = task.trim();
+    if (task != "") {
       const task_el = document.createElement("div");
       task_el.classList.add("task");
 
@@ -59,6 +61,6 @@ window.addEventListener("load", () => {
       task_delete_el.addEventListener("click", (e) => {
         list_el.removeChild(task_el);
       });
-    }
+    } else input.value = "";
   });
 });
