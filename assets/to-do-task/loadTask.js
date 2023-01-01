@@ -1,12 +1,9 @@
-window.addEventListener("load", () => {
-  
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    /**
-     * @type {string} task
-     */
-    let task = input.value;
-    task = task.trim();
+const form = document.querySelector("#new-task-form");
+const list_el = document.querySelector("#tasks");
+
+if (localStorage.getItem("to-do-task") != null) {
+  var task_list = JSON.parse(localStorage.getItem("to-do-task"));
+  task_list.forEach((task) => {
     if (task != "") {
       const task_el = document.createElement("div");
       task_el.classList.add("task");
@@ -42,8 +39,6 @@ window.addEventListener("load", () => {
 
       list_el.appendChild(task_el);
 
-      input.value = "";
-
       task_edit_el.addEventListener("click", (e) => {
         if (task_edit_el.innerText.toLowerCase() == "edit") {
           task_edit_el.innerText = "Save";
@@ -58,6 +53,6 @@ window.addEventListener("load", () => {
       task_delete_el.addEventListener("click", (e) => {
         list_el.removeChild(task_el);
       });
-    } else input.value = "";
+    }
   });
-});
+}
