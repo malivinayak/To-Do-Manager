@@ -49,15 +49,16 @@ if (localStorage.getItem("to-do-task") != null) {
           task_list[task_list.indexOf(task)] = updated_task;
           localStorage.setItem("to-do-task", JSON.stringify(task_list));
           task = updated_task;
+
           task_edit_el.innerText = "Edit";
           task_input_el.setAttribute("readonly", "readonly");
-          
         }
       });
 
       task_delete_el.addEventListener("click", (e) => {
-        task_list.splice(task_list.indexOf(task),1);
+        task_list.splice(task_list.indexOf(task), 1);
         localStorage.setItem("to-do-task", JSON.stringify(task_list));
+        
         list_el.removeChild(task_el);
       });
     }
