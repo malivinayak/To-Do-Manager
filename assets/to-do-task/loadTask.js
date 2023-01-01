@@ -1,15 +1,9 @@
-window.addEventListener("load", () => {
-  const form = document.querySelector("#new-task-form");
-  const input = document.querySelector("#new-task-input");
-  const list_el = document.querySelector("#tasks");
+const form = document.querySelector("#new-task-form");
+const list_el = document.querySelector("#tasks");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    /**
-     * @type {string} task
-     */
-    let task = input.value;
-    task = task.trim();
+if (localStorage.getItem("to-do-task") != null) {
+  var task_list = JSON.parse(localStorage.getItem("to-do-task"));
+  task_list.forEach((task) => {
     if (task != "") {
       const task_el = document.createElement("div");
       task_el.classList.add("task");
@@ -45,22 +39,28 @@ window.addEventListener("load", () => {
 
       list_el.appendChild(task_el);
 
-      input.value = "";
-
       task_edit_el.addEventListener("click", (e) => {
         if (task_edit_el.innerText.toLowerCase() == "edit") {
           task_edit_el.innerText = "Save";
           task_input_el.removeAttribute("readonly");
           task_input_el.focus();
         } else {
+          var updated_task = task_input_el.value;
+          task_list[task_list.indexOf(task)] = updated_task;
+          localStorage.setItem("to-do-task", JSON.stringify(task_list));
+          task = updated_task;
+
           task_edit_el.innerText = "Edit";
           task_input_el.setAttribute("readonly", "readonly");
         }
       });
 
       task_delete_el.addEventListener("click", (e) => {
+        task_list.splice(task_list.indexOf(task), 1);
+        localStorage.setItem("to-do-task", JSON.stringify(task_list));
+        
         list_el.removeChild(task_el);
       });
-    } else input.value = "";
+    }
   });
-});
+}
