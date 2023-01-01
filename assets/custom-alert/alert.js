@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
       alert.removeClass("show");
       alert.addClass("hide");
     }, 5000);
+    input.value = "";
   }
   alertClose.click(function () {
     alert.removeClass("show");
