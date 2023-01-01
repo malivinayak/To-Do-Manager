@@ -20,6 +20,7 @@ window.addEventListener("load", () => {
       var task_list = JSON.parse(localStorage.getItem("to-do-task"));
       task_list.push(new_task);
       localStorage.setItem("to-do-task", JSON.stringify(task_list));
+      window.location.reload();
     }
   });
 });
