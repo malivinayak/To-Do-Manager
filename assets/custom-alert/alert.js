@@ -1,4 +1,3 @@
-const form = document.querySelector("#new-task-form");
 const input = document.querySelector("#new-task-input");
 const alert = $("#custAlert");
 const alertClose = $("#alertClose");
