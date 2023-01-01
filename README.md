@@ -7,7 +7,7 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/malivinayak/To-Do-Manager?color=orange)](https://github.com/malivinayak/To-Do-Manager/issues?q=is%3Aissue+is%3Aclosed)
 ![Platform support](https://img.shields.io/badge/Platform-Web-9cf)
 
-![image](https://user-images.githubusercontent.com/66154908/209424487-9abb7cf5-244d-4018-9f4c-4091108fab05.png)
+![image](https://user-images.githubusercontent.com/66154908/210176617-efdbd6ec-66f2-4fd6-860e-569482b3b60f.png)
 
 <hr>
 
