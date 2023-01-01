@@ -9,6 +9,7 @@ form.addEventListener("submit", (e) => {
    * @type {string} task
    */
   const task = input.value;
+  input.value = "";
   if (task.trim() == "") {
     alert.addClass("show");
     alert.removeClass("hide");
