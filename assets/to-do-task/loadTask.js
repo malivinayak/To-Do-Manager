@@ -51,6 +51,8 @@ if (localStorage.getItem("to-do-task") != null) {
       });
 
       task_delete_el.addEventListener("click", (e) => {
+        task_list.splice(task_list.indexOf(task),1);
+        localStorage.setItem("to-do-task", JSON.stringify(task_list));
         list_el.removeChild(task_el);
       });
     }
