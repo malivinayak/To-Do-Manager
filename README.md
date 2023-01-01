@@ -1,10 +1,9 @@
 <h1 align="center">📃To Do Manager</h1>
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/malivinayak/To-Do-Manager)](https://github.com/malivinayak/To-Do-Manager/releases/latest)
-![GitHub release (latest by date)](https://img.shields.io/github/downloads/malivinayak/To-Do-Manager/total?color=%23c315e6&label=Downloads)
 [![Website](https://img.shields.io/website?url=https://malivinayak.github.io/To-Do-Manager/)](https://malivinayak.github.io/To-Do-Manager/)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/malivinayak/To-Do-Manager?color=red)](https://github.com/malivinayak/To-Do-Manager/pulls?q=is%3Apr+is%3Aclosed)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/malivinayak/To-Do-Manager?color=orange)](https://github.com/malivinayak/To-Do-Manager/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/malivinayak/To-Do-Manager?color=%23c315e6)](https://github.com/malivinayak/To-Do-Manager/issues?q=is%3Aissue+is%3Aclosed)
 ![Platform support](https://img.shields.io/badge/Platform-Web-9cf)
 
 ![image](https://user-images.githubusercontent.com/66154908/210176617-efdbd6ec-66f2-4fd6-860e-569482b3b60f.png)
