@@ -46,19 +46,40 @@ if (localStorage.getItem("to-do-task") != null) {
           task_input_el.focus();
         } else {
           var updated_task = task_input_el.value;
-          task_list[task_list.indexOf(task)] = updated_task;
-          localStorage.setItem("to-do-task", JSON.stringify(task_list));
-          task = updated_task;
+          //Check: is updated task blank
+          if (updated_task.trim() == "") {
+            // yes: show warning
+            const input = document.querySelector("#new-task-input");
+            const alert = $("#custAlert1");
+            const alertClose = $("#alertClose");
 
-          task_edit_el.innerText = "Edit";
-          task_input_el.setAttribute("readonly", "readonly");
+            alert.addClass("show");
+            alert.removeClass("hide");
+            alert.addClass("showAlert");
+            setTimeout(function () {
+              alert.removeClass("show");
+              alert.addClass("hide");
+            }, 5000);
+            alertClose.click(function () {
+              alert.removeClass("show");
+              alert.addClass("hide");
+            });
+          } else {
+            //no: update task
+            task_list[task_list.indexOf(task)] = updated_task;
+            localStorage.setItem("to-do-task", JSON.stringify(task_list));
+            task = updated_task;
+
+            task_edit_el.innerText = "Edit";
+            task_input_el.setAttribute("readonly", "readonly");
+          }
         }
       });
 
       task_delete_el.addEventListener("click", (e) => {
         task_list.splice(task_list.indexOf(task), 1);
         localStorage.setItem("to-do-task", JSON.stringify(task_list));
-        
+
         list_el.removeChild(task_el);
       });
     }
