@@ -45,8 +45,13 @@ if (localStorage.getItem("to-do-task") != null) {
           task_input_el.removeAttribute("readonly");
           task_input_el.focus();
         } else {
+          var updated_task = task_input_el.value;
+          task_list[task_list.indexOf(task)] = updated_task;
+          localStorage.setItem("to-do-task", JSON.stringify(task_list));
+          task = updated_task;
           task_edit_el.innerText = "Edit";
           task_input_el.setAttribute("readonly", "readonly");
+          
         }
       });
 
