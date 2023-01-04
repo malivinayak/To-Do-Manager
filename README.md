@@ -22,10 +22,9 @@
 
 
 ## About The Project 
-Hey everyone, In this repo you will get To-do Manager App with crud operations in `HTML` `CSS` & `JavaScript` using local storage. Crud operation means to create, read, update, and delete.
+To-do Manager is a web development project using HTML, CSS & JavaScript with local storage. Along with front-end To-Do-Manager demonstrate CRUD operation on local storage. [CRUD operation -> Create, Read, Update, and Delete(CRUD)]
 
-In this To-do Manager app you can easily add, edit, delete or mark as complete your tasks. The tasks you added to this todo app will be stored in the browser’s local storage so, they won’t be removed on page refresh or tab close. 
-
+To-Do-Manager is a web app used to maintain our day-to-day tasks or list everything that we have to do. This project provides an easy way to add, edit and delete tasks. Added tasks will be stored in the browser’s local storage so, they won’t be removed on page refresh or tab close.
 
 <h3> <b>Let's Try To-Do-Manager</b> - <a href="https://malivinayak.github.io/To-Do-Manager/">Click me to manage your To-Do list</a> </h3>
 
