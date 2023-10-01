@@ -4,7 +4,7 @@ const list_el = document.querySelector("#tasks");
 if (localStorage.getItem("to-do-task") != null) {
   var task_list = JSON.parse(localStorage.getItem("to-do-task"));
   const heading = document.createElement("h2");
-  heading.innerText = "TASKS";
+  heading.innerText = "Tasks";
   list_el.appendChild(heading);
   task_list.forEach((task) => {
     if (task != "") {
