@@ -17,12 +17,10 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   background: var(--dark);
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -37,6 +35,14 @@ header h1 {
   font-weight: 300;
   color: rgb(92, 232, 216);
   margin-bottom: 1rem;
+}
+
+
+.header-section {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--dark)
 }
 
 #new-task-form {
@@ -93,8 +99,6 @@ main {
 
 .task-list {
   padding: 1rem;
-  height: 83vh;
-  overflow: auto;
 }
 
 .task-list h2 {
