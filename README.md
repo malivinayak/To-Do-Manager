@@ -6,7 +6,8 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/malivinayak/To-Do-Manager?color=%23c315e6)](https://github.com/malivinayak/To-Do-Manager/issues?q=is%3Aissue+is%3Aclosed)
 ![Platform support](https://img.shields.io/badge/Platform-Web-9cf)
 
-![image](https://user-images.githubusercontent.com/66154908/210176617-efdbd6ec-66f2-4fd6-860e-569482b3b60f.png)
+<!-- ![image](https://user-images.githubusercontent.com/66154908/210176617-efdbd6ec-66f2-4fd6-860e-569482b3b60f.png) -->
+![image](https://github.com/malivinayak/To-Do-Manager/assets/66154908/51307d5e-2863-439d-850c-746610d7d0dd)
 
 <hr>
 
