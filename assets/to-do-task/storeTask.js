@@ -11,17 +11,28 @@ window.addEventListener("load", () => {
     new_task = new_task.trim();
     console.log(new_task + " from localStore");
     if (new_task != "") {
-      if (localStorage.getItem("to-do-task") == null) {
-        localStorage.setItem("to-do-task", "[]");
+    let task_list = JSON.parse(localStorage.getItem("to-do-task")) || [];
+    if (!task_list.includes(new_task)) {
+        task_list.push(new_task);
+        localStorage.setItem("to-do-task", JSON.stringify(task_list));
+        input.value = "";
+        window.location.reload();
+      } else {
+        // Alert the user that the task already exists
+        const alert = $("#custAlert2");
+        const alertClose = $("#alertClose");
+        alert.addClass("show");
+        alert.removeClass("hide");
+        alert.addClass("showAlert");
+        setTimeout(function () {
+          alert.removeClass("show");
+          alert.addClass("hide");
+        }, 5000);
+        alertClose.click(function () {
+          alert.removeClass("show");
+          alert.addClass("hide");
+        });
       }
-      /**
-       * @type {Array} task_list
-       */
-      var task_list = JSON.parse(localStorage.getItem("to-do-task"));
-      task_list.push(new_task);
-      localStorage.setItem("to-do-task", JSON.stringify(task_list));
-      input.value = "";
-      window.location.reload();
     }
   });
 });
