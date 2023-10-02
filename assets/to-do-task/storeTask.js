@@ -116,7 +116,7 @@ window.addEventListener("load", () => {
     new_task = new_task.trim();
     console.log(new_task + " from localStore");
     if (new_task != "") {
-    
+
       if (!task_listl.includes(new_task)) {
         task_listl.push(new_task);
         if (task_listl.length === 1) headingTask();
@@ -141,7 +141,8 @@ window.addEventListener("load", () => {
         });
 
         // list_el.load();
-      } else {
+      }
+      else {
         // Alert the user that the task already exists
         const alert = $("#custAlert2");
         const alertClose = $("#alertClose");
