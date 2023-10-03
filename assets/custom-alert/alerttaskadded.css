@@ -59,6 +59,16 @@
 }
 
 
+.alertt .fa-check-circle {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #068902;
+  /* color: white; */
+  font-size: 30px;
+}
+
 .alertt .msgt {
   padding: 0 20px;
   font-size: 18px;
