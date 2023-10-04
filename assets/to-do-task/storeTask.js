@@ -90,6 +90,21 @@ window.addEventListener("load", () => {
 
             task_edit_el.innerText = "Edit";
             task_input_el.setAttribute("readonly", "readonly");
+
+            // Display the success alert for editing and saving a task
+            const alerte = $("#custAlert5");
+            const alerteClose = $("#alertClose");
+            alerte.addClass("show");
+            alerte.removeClass("hide");
+            alerte.addClass("showAlert");
+            setTimeout(function () {
+              alerte.removeClass("show");
+              alerte.addClass("hide");
+            }, 5000);
+            alerteClose.click(function () {
+              alerte.removeClass("show");
+              alerte.addClass("hide");
+            });
           }
         }
       });
