@@ -98,6 +98,20 @@ window.addEventListener("load", () => {
         task_listl.splice(task_listl.indexOf(task), 1);
         localStorage.setItem("to-do-task", JSON.stringify(task_listl));
         list_el.removeChild(task_el);
+        const alert = $("#custAlert4");
+            const alertClose = $("#alertClose");
+
+            alert.addClass("show");
+            alert.removeClass("hide");
+            alert.addClass("showAlert");
+            setTimeout(function () {
+              alert.removeClass("show");
+              alert.addClass("hide");
+            }, 5000);
+            alertClose.click(function () {
+              alert.removeClass("show");
+              alert.addClass("hide");
+            });
         if (task_listl.length === 0) {
 
           taskhead.removeChild(heading);
