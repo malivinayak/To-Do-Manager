@@ -1,26 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap"); */
 
-.alert {
-  background: #ffdb9b;
+.alertt {
+  background: #7afc76;
   padding: 20px 40px;
   min-width: 420px;
   position: absolute;
   right: 0;
   top: 10px;
   border-radius: 4px;
-  border-left: 8px solid #ffa502;
+  border-left: 8px solid #08da01;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
 
-.alert.showAlert {
+.alertt.showAlert {
   opacity: 1;
   pointer-events: auto;
 }
 
-.alert.show {
+.alertt.show {
   animation: show_slide 1s ease forwards;
 }
 
@@ -39,7 +39,7 @@
   }
 }
 
-.alert.hide {
+.alertt.hide {
   animation: hide_slide 1s ease forwards;
 }
 
@@ -58,37 +58,39 @@
   }
 }
 
-.alert .fa-exclamation-circle {
+
+.alertt .fa-check-circle {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ce8500;
+  color: #068902;
+  /* color: white; */
   font-size: 30px;
 }
 
-.alert .msg {
+.alertt .msgt {
   padding: 0 20px;
   font-size: 18px;
-  color: #ce8500;
+  color: #000000;
 }
 
-.alert .close-btn {
+.alertt .close-btnt {
   position: absolute;
   right: 0px;
   top: 50%;
   transform: translateY(-50%);
-  background: #ffd080;
+  background: #25e01f;
   padding: 20px 18px;
   cursor: pointer;
 }
 
-.alert .close-btn:hover {
-  background: #ffc766;
+.alertt .close-btnt:hover {
+  background: #4bd846;
 }
 
-.alert .close-btn .fas {
-  color: #ce8500;
+.alertt .close-btnt .fas {
+  color: #056e01;
   font-size: 22px;
   line-height: 40px;
 }

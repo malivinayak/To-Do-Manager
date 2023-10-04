@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/main.css" />
     <link rel="stylesheet" href="./assets/name/storeName.css" />
     <link rel="stylesheet" href="./assets/custom-alert/alert.css" />
+    <link rel="stylesheet" href="./assets/custom-alert/alerttaskadded.css"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -17,24 +18,30 @@
   </head>
 
   <body>
-    <section class="greeting">
-      <h2 class="title">
-        Hey, <input type="text" id="name" placeholder="Name Here!!" />
-      </h2>
-    </section>
+    <div class="header-section">
+      <section class="greeting">
+        <h2 class="title">
+          Hey, <input type="text" id="name" placeholder="Name Here!!" />
+        </h2>
+      </section>
+      
+      <header>
+        <h1>Task List ↴ </h1>
+        <form id="new-task-form">
+          <input type="text" name="new-task-input" id="new-task-input" placeholder="What would you like to add!!" />
+          <input type="submit" id="new-task-submit" value="Add Task" />
+          </form>
+          </header>
+    </div>
 
-    <header>
-      <h1>Task List ↴ </h1>
-      <form id="new-task-form">
-        <input
-          type="text"
-          name="new-task-input"
-          id="new-task-input"
-          placeholder="What would you like to add!!"
-        />
-        <input type="submit" id="new-task-submit" value="Add Task" />
-      </form>
-    </header>
+
+    <div class="alertt hide" id="custAlert3">
+      <span class="fas fa fa-check-circle" style="font-size:24px"></span>
+      <span class="msgt">Task added Successfully</span>
+      <div class="close-btnt" id="alertClose">
+        <span class="fas fa-times"></span>
+      </div>
+    </div>
 
     <main>
       <section class="task-list">
