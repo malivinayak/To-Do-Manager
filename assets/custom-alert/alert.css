@@ -158,14 +158,14 @@
   color: #9b2c0d;
 }
 .update {
-  background: yellow;
+  background: blue;
   padding: 20px 40px;
   min-width: 420px;
   position: absolute;
   right: 0;
   top: 10px;
   border-radius: 4px;
-  border-left: 8px solid yellow;
+  border-left: 8px solid rgb(3, 3, 92);
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
@@ -189,7 +189,7 @@
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: green;
+  color: rgb(3, 3, 49)
   /* color: white; */
   font-size: 30px;
 }
@@ -215,7 +215,7 @@
 }
 
 .update .close-btnt .fas {
-  color: rgb(106, 6, 6);
+  color: rgb(4, 4, 63);
   font-size: 22px;
   line-height: 40px;
 }
