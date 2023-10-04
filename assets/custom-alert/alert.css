@@ -158,14 +158,14 @@
   color: #9b2c0d;
 }
 .update {
-  background: blue;
+  background-color:#007bff ;
   padding: 20px 40px;
   min-width: 420px;
   position: absolute;
   right: 0;
   top: 10px;
   border-radius: 4px;
-  border-left: 8px solid rgb(3, 3, 92);
+  border-left: 8px solid blue;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
@@ -184,17 +184,18 @@
   animation: hide_slide 1s ease forwards;
 }
 
-.update .fa-check-circle {
+.update .fa-edit {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(3, 3, 49)
+  color: rgb(4, 4, 63);
   /* color: white; */
   font-size: 30px;
 }
 
 .update .msgt {
+  background-color: #007bff;
   padding: 0 20px;
   font-size: 18px;
   color: #000000;
@@ -205,13 +206,13 @@
   right: 0px;
   top: 50%;
   transform: translateY(-50%);
-  background: yello;
   padding: 20px 18px;
   cursor: pointer;
+  background-color:blue;
 }
 
 .update .close-btnt:hover {
-  background: yello;
+  background: rgba(50, 50, 206, 0.699);
 }
 
 .update .close-btnt .fas {
