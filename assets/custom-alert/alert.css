@@ -12,6 +12,24 @@
   pointer-events: none;
 }
 
+/* Warning Alert for Empty Task */
+#custAlert.hide {
+  background: #ffdb9b;
+  border-left: 8px solid #ffa502;
+}
+
+/* Warning Alert for Saving Blank Task */
+#custAlert1.hide {
+  background: #ffdb9b;
+  border-left: 8px solid #ffa502;
+}
+
+/* Warning Alert for Adding Duplicate Task */
+#custAlert2.hide {
+  background: #ffdb9b;
+  border-left: 8px solid #ffa502;
+}
+
 .alert {
   background: #ffdb9b;
   border-left: 8px solid #ffa502;
@@ -120,7 +138,8 @@
   color: #000000; 
 }
 
-.alert .close-btn, .alertt .close-btnt, .alertd .close-btnd, .alerte .close-btne {
+/* Close Button for All Alert Elements */
+.alert .close-btn, .alertt .close-btnt, .alertd .close-btnd, .alerte .close-btne, .alert .close-btn1, .alert .close-btn2 {
   position: absolute;
   right: 0px;
   top: 50%;
@@ -142,7 +161,7 @@
 }
 
 .alerte .close-btne {
-  background: #0068d6; 
+  background: #007bff; 
 }
 
 .alert .close-btn:hover {
@@ -150,7 +169,7 @@
 }
 
 .alertt .close-btnt:hover {
-  background: #4bd846;
+  background: #41c53d;
 }
 
 .alertd .close-btnd:hover {
@@ -158,10 +177,26 @@
 }
 
 .alerte .close-btne:hover {
-  background: #004b9e;
+  background: #0067d6;
 }
 
-.alert .close-btn .fas, .alertt .close-btnt .fas, .alertd .close-btnd .fas, .alerte .close-btne .fas {
+
+.alert .close-btn1,
+.alert .close-btn2 {
+  background: #ce8500;
+}
+
+.alert .close-btn1:hover,
+.alert .close-btn2:hover {
+  background: #aa6e00;
+}
+
+.alert .close-btn .fas,
+.alertt .close-btnt .fas,
+.alertd .close-btnd .fas,
+.alerte .close-btne .fas,
+.alert .close-btn1 .fas,
+.alert .close-btn2 .fas {
   font-size: 22px;
   line-height: 40px;
 }
@@ -179,5 +214,17 @@
 }
 
 .alerte .close-btne .fas {
-  color: #ffffff; /* White color for edit alert icon */
+  color: #004b9e;
+}
+
+.alert .close-btn1 .fas {
+  color: #ffd080;
+}
+
+.alert .close-btn2 .fas {
+  color: #ffd080;
+}
+
+.alerte .fa-edit {
+  color: #004ea1;
 }

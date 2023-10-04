@@ -19,7 +19,9 @@ window.addEventListener("load", () => {
     if (task_listl.length > 0) taskhead.prepend(heading);
   }
 
-  task_listl.forEach((task) => { insertTask(task) });
+  task_listl.forEach((task) => {
+    insertTask(task);
+  });
 
   function insertTask(task) {
     if (task != "") {
@@ -44,11 +46,11 @@ window.addEventListener("load", () => {
 
       const task_edit_el = document.createElement("button");
       task_edit_el.classList.add("edit");
-      task_edit_el.innerText = "Edit";
+      task_edit_el.innerHTML = '<i class="fas fa-edit"></i>'; // Edit icon
 
       const task_delete_el = document.createElement("button");
       task_delete_el.classList.add("delete");
-      task_delete_el.innerText = "Delete";
+      task_delete_el.innerHTML = '<i class="fas fa-trash-alt"></i>'; // Delete icon
 
       task_actions_el.appendChild(task_edit_el);
       task_actions_el.appendChild(task_delete_el);
@@ -58,13 +60,20 @@ window.addEventListener("load", () => {
       list_el.appendChild(task_el);
 
       task_edit_el.addEventListener("click", (e) => {
-        if (task_edit_el.innerText.toLowerCase() == "edit") {
-          task_edit_el.innerText = "Save";
+        if (task_edit_el.querySelector("i").classList.contains("fa-edit")) {
+          task_edit_el.innerHTML = '<i class="fas fa-save"></i>'; // Save icon
           task_input_el.removeAttribute("readonly");
           task_input_el.focus();
+
+          // Add a keydown event listener for 'Enter' key
+          task_input_el.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+              task_edit_el.click();
+            }
+          });
         } else {
           var updated_task = task_input_el.value;
-          //Check: is updated task blank
+          // Check: is updated task blank
           if (updated_task.trim() == "") {
             // yes: show warning
             const input = document.querySelector("#new-task-input");
@@ -83,12 +92,12 @@ window.addEventListener("load", () => {
               alert.addClass("hide");
             });
           } else {
-            //no: update task
+            // no: update task
             task_listl[task_listl.indexOf(task)] = updated_task;
             localStorage.setItem("to-do-task", JSON.stringify(task_listl));
             task = updated_task;
 
-            task_edit_el.innerText = "Edit";
+            task_edit_el.innerHTML = '<i class="fas fa-edit"></i>'; // Edit icon
             task_input_el.setAttribute("readonly", "readonly");
 
             // Display the success alert for editing and saving a task
@@ -110,31 +119,34 @@ window.addEventListener("load", () => {
       });
 
       task_delete_el.addEventListener("click", (e) => {
-        task_listl.splice(task_listl.indexOf(task), 1);
-        localStorage.setItem("to-do-task", JSON.stringify(task_listl));
-        list_el.removeChild(task_el);
-        const alert = $("#custAlert4");
-            const alertClose = $("#alertClose");
+        // Ask for confirmation before deleting
+        const isConfirmed = confirm("Are you sure you want to delete this task?");
+        if (isConfirmed) {
+          task_listl.splice(task_listl.indexOf(task), 1);
+          localStorage.setItem("to-do-task", JSON.stringify(task_listl));
+          list_el.removeChild(task_el);
+          const alert = $("#custAlert4");
+          const alertClose = $("#alertClose");
 
-            alert.addClass("show");
-            alert.removeClass("hide");
-            alert.addClass("showAlert");
-            setTimeout(function () {
-              alert.removeClass("show");
-              alert.addClass("hide");
-            }, 5000);
-            alertClose.click(function () {
-              alert.removeClass("show");
-              alert.addClass("hide");
-            });
-        if (task_listl.length === 0) {
-
-          taskhead.removeChild(heading);
+          alert.addClass("show");
+          alert.removeClass("hide");
+          alert.addClass("showAlert");
+          setTimeout(function () {
+            alert.removeClass("show");
+            alert.addClass("hide");
+          }, 5000);
+          alertClose.click(function () {
+            alert.removeClass("show");
+            alert.addClass("hide");
+          });
+          if (task_listl.length === 0) {
+            taskhead.removeChild(heading);
+          }
         }
+
       });
     }
   }
-
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -145,14 +157,12 @@ window.addEventListener("load", () => {
     new_task = new_task.trim();
     console.log(new_task + " from localStore");
     if (new_task != "") {
-
       if (!task_listl.includes(new_task)) {
         task_listl.push(new_task);
         if (task_listl.length === 1) headingTask();
         localStorage.setItem("to-do-task", JSON.stringify(task_listl));
         input.value = "";
         insertTask(new_task);
-
 
         // task is stored alert
         const alert = $("#custAlert3");
@@ -170,8 +180,7 @@ window.addEventListener("load", () => {
         });
 
         // list_el.load();
-      }
-      else {
+      } else {
         // Alert the user that the task already exists
         const alert = $("#custAlert2");
         const alertClose = $("#alertClose");
