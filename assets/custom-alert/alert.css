@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-.alert , .alertt,.alertd{
+.alert, .alertt, .alertd, .alerte {
   padding: 20px 40px;
   min-width: 420px;
   position: absolute;
@@ -12,28 +12,50 @@
   pointer-events: none;
 }
 
-.alert{
+/* Warning Alert for Empty Task */
+#custAlert.hide {
   background: #ffdb9b;
   border-left: 8px solid #ffa502;
 }
 
-.alertt{
+/* Warning Alert for Saving Blank Task */
+#custAlert1.hide {
+  background: #ffdb9b;
+  border-left: 8px solid #ffa502;
+}
+
+/* Warning Alert for Adding Duplicate Task */
+#custAlert2.hide {
+  background: #ffdb9b;
+  border-left: 8px solid #ffa502;
+}
+
+.alert {
+  background: #ffdb9b;
+  border-left: 8px solid #ffa502;
+}
+
+.alertt {
   background: #7afc76;
   border-left: 8px solid #08da01;
 }
 
-.alertd{
+.alertd {
   background: #ff9160;
   border-left: 8px solid #ce0508;
 }
 
+.alerte {
+  background: #007bff; 
+  border-left: 8px solid #0068d6;
+}
 
-.alert.showAlert ,.alertt.showAlert,.alertd.showAlert{
+.alert.showAlert, .alertt.showAlert, .alertd.showAlert, .alerte.showAlert {
   opacity: 1;
   pointer-events: auto;
 }
 
-.alert.show,.alertt.show ,.alertd.show {
+.alert.show, .alertt.show, .alertd.show, .alerte.show {
   animation: show_slide 1s ease forwards;
 }
 
@@ -52,7 +74,7 @@
   }
 }
 
-.alert.hide,.alertt.hide,.alertd.hide {
+.alert.hide, .alertt.hide, .alertd.hide, .alerte.hide {
   animation: hide_slide 1s ease forwards;
 }
 
@@ -71,7 +93,7 @@
   }
 }
 
-.alert .fa-exclamation-circle,.alertt .fa-check-circle,.alertd .fa-trash-alt {
+.alert .fa-exclamation-circle, .alertt .fa-check-circle, .alertd .fa-trash-alt, .alerte .fa-check-circle {
   position: absolute;
   left: 20px;
   top: 50%;
@@ -79,36 +101,45 @@
   font-size: 30px;
 }
 
-.alert .fa-exclamation-circle{
+.alert .fa-exclamation-circle {
   color: #ce8500;
 }
 
-.alertt .fa-check-circle{
+.alertt .fa-check-circle {
   color: #068902;
 }
 
-.alertd .fa-trash-alt{
-  color:#910002
+.alertd .fa-trash-alt {
+  color: #910002;
 }
 
-.alert .msg,.alertt .msgt,.alertd .msgd {
+.alerte .fa-check-circle {
+  color: #0068d6; /* Blue color for edit alert */
+}
+
+.alert .msg, .alertt .msgt, .alertd .msgd, .alerte .msge {
   padding: 0 20px;
   font-size: 18px;
 }
 
-.alert .msg{
+.alert .msg {
   color: #ce8500;
 }
 
-.alertt .msgt{
+.alertt .msgt {
   color: #000000;
 }
 
-.alertd .msgd{
+.alertd .msgd {
   color: #570202;
 }
 
-.alert .close-btn,.alertt .close-btnt,.alertd .close-btnd {
+.alerte .msge {
+  color: #000000; 
+}
+
+/* Close Button for All Alert Elements */
+.alert .close-btn, .alertt .close-btnt, .alertd .close-btnd, .alerte .close-btne, .alert .close-btn1, .alert .close-btn2 {
   position: absolute;
   right: 0px;
   top: 50%;
@@ -117,16 +148,20 @@
   cursor: pointer;
 }
 
-.alert .close-btn{
+.alert .close-btn {
   background: #ffd080;
 }
 
-.alertt .close-btnt{
+.alertt .close-btnt {
   background: #25e01f;
 }
 
-.alertd .close-btnd{
+.alertd .close-btnd {
   background: #ff2828;
+}
+
+.alerte .close-btne {
+  background: #007bff; 
 }
 
 .alert .close-btn:hover {
@@ -134,27 +169,62 @@
 }
 
 .alertt .close-btnt:hover {
-  background: #4bd846;
+  background: #41c53d;
 }
 
 .alertd .close-btnd:hover {
   background: #d44a18;
 }
 
-.alert .close-btn .fas,.alertt .close-btnt .fas,.alertd .close-btnd .fas {
+.alerte .close-btne:hover {
+  background: #0067d6;
+}
+
+
+.alert .close-btn1,
+.alert .close-btn2 {
+  background: #ce8500;
+}
+
+.alert .close-btn1:hover,
+.alert .close-btn2:hover {
+  background: #aa6e00;
+}
+
+.alert .close-btn .fas,
+.alertt .close-btnt .fas,
+.alertd .close-btnd .fas,
+.alerte .close-btne .fas,
+.alert .close-btn1 .fas,
+.alert .close-btn2 .fas {
   font-size: 22px;
   line-height: 40px;
 }
 
-.alert .close-btn .fas{
+.alert .close-btn .fas {
   color: #ce8500;
 }
 
-.alertt .close-btnt .fas{
+.alertt .close-btnt .fas {
   color: #056e01;
 }
 
-.alertd .close-btnd .fas{
+.alertd .close-btnd .fas {
   color: #9b2c0d;
 }
 
+.alerte .close-btne .fas {
+  color: #004b9e;
+}
+
+.alert .close-btn1 .fas {
+  color: #ffd080;
+}
+
+.alert .close-btn2 .fas {
+  color: #ffd080;
+}
+
+.alerte .fa-edit {
+  color: #004ea1;
+}

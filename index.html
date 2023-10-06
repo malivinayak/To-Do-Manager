@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>To-Do-Manager</title>
-    <!-- Favicon icon link -->
-    <link rel="icon" href="./assets/images/to-do icon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="./assets/main.css" />
-    <link rel="stylesheet" href="./assets/name/storeName.css" />
-    <link rel="stylesheet" href="./assets/custom-alert/alert.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </head>
 
-  <body>
-    <div class="header-section">
-      <section class="greeting">
-        <h2 class="title">
-          Hey, <input type="text" id="name" placeholder="Name Here!!" />
-        </h2>
-      </section>
-      
-      <header>
-        <h1>Task List ↴ </h1>
-        <form id="new-task-form">
-          <input type="text" name="new-task-input" id="new-task-input" placeholder="What would you like to add!!" />
-          <input type="submit" id="new-task-submit" value="Add Task" />
-          </form>
-          </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do-Manager</title>
+
+  <link rel="stylesheet" href="./assets/main.css" />
+  <link rel="stylesheet" href="./assets/name/storeName.css" />
+  <link rel="stylesheet" href="./assets/custom-alert/alert.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="header-section">
+    <section class="greeting">
+      <h2 class="title">
+        Hey, <input type="text" id="name" placeholder="Your name here..." />
+      </h2>
+    </section>
+
+    <header>
+      <h1>Task List ↴ </h1>
+      <form id="new-task-form">
+        <input type="text" name="new-task-input" id="new-task-input" placeholder="Your task here..." />
+        <input type="submit" id="new-task-submit" value="Add Task" />
+      </form>
+    </header>
+  </div>
+
+  <div class="alertt hide" id="custAlert3">
+    <span class="fas fa fa-check-circle" style="font-size:24px"></span>
+    <span class="msgt">Success: Task added successfully</span>
+    <div class="close-button close-btnt">
+      <span class="fas fa-times"></span>
     </div>
-
-
-    <div class="alertt hide" id="custAlert3">
-      <span class="fas fa fa-check-circle" style="font-size:24px"></span>
-      <span class="msgt">Success: Task added Successfully</span>
-      <div class="close-btnt" id="alertClose">
-        <span class="fas fa-times"></span>
-      </div>
+  </div>
+  <div class="alertd hide" id="custAlert4">
+    <span class='fas fa-trash-alt' style='font-size:24px;'></span>
+    <span class="msgd">Success: Task deleted successfully</span>
+    <div class="close-button close-btnd">
+      <span class="fas fa-times"></span>
     </div>
-    <div class="alertd hide" id="custAlert4">
-      <span class='fas fa-trash-alt' style='font-size:24px;'></span>
-      <span class="msgd">Success: Task deleted Successfully</span>
-      <div class="close-btnd" id="alertClose">
-        <span class="fas fa-times"></span>
-      </div>
+  </div>
+  <div class="alerte hide" id="custAlert5">
+    <span class="fas fa-edit" style="font-size: 24px"></span>
+    <span class="msge">Success: Task edit saved successfully</span>
+    <div class="close-button close-btne">
+      <span class="fas fa-times"></span>
     </div>
+  </div>
 
-    <main>
-      <section class="task-list">
-        <!-- <h2>Tasks</h2> -->
 
-        <div id="tasks">
-          <!-- <div class="task">
+  <main>
+    <section class="task-list">
+      <!-- <h2>Tasks</h2> -->
+
+      <div id="tasks">
+        <!-- <div class="task">
                     <div class="content">
                         <input type="text" class="text" value="My 1st task" readonly />
                     </div>
@@ -66,40 +69,44 @@
                         <button class="delete">delete</button>
                     </div>
                 </div> -->
-        </div>
-      </section>
-    </main>
-
-    <div class="alert hide" id="custAlert">
-      <span class="fas fa-exclamation-circle"></span>
-      <span class="msg">Warning: An empty task cannot be added!</span>
-      <div class="close-btn" id="alertClose">
-        <span class="fas fa-times"></span>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <div class="alert hide" id="custAlert1">
-      <span class="fas fa-exclamation-circle"></span>
-      <span class="msg">Warning: Can not Save blank Task!</span>
-      <div class="close-btn" id="alertClose">
-        <span class="fas fa-times"></span>
-      </div>
+  <!-- Warning Alert for Empty Task -->
+  <div class="alert hide" id="custAlert">
+    <span class="fas fa-exclamation-circle"></span>
+    <span class="msg">Warning: An empty task cannot be added!</span>
+    <div class="close-button close-btn">
+      <span class="fas fa-times"></span>
     </div>
+  </div>
 
-    <div class="alert hide" id="custAlert2">
-      <span class="fas fa-exclamation-circle"></span>
-      <span class="msg">Warning: Cannot add same task again</span>
-      <div class="close-btn" id="alertClose">
-        <span class="fas fa-times"></span>
-      </div>
+  <!-- Warning Alert for Saving Blank Task -->
+  <div class="alert hide" id="custAlert1">
+    <span class="fas fa-exclamation-circle"></span>
+    <span class="msg">Warning: Can not Save blank Task!</span>
+    <div class="close-button close-btn1">
+      <span class="fas fa-times"></span>
     </div>
+  </div>
 
-    <!-- Icon Attribution -->
-    <!-- <a href='https://pngtree.com/freepng/business-work-to-do-list_4896759.html'>png image from pngtree.com/</a> -->
-    <script src="./assets/to-do-task/loadTask.js"></script>
-    <script src="./assets/to-do-task/storeTask.js"></script>
-    <script src="assets/main.js"></script>
-    <script src="./assets/name/storeName.js"></script>
-    <script src="./assets/custom-alert/alert.js"></script>
-  </body>
+  <!-- Warning Alert for Adding Duplicate Task -->
+  <div class="alert hide" id="custAlert2">
+    <span class="fas fa-exclamation-circle"></span>
+    <span class="msg">Warning: Cannot add same task again</span>
+    <div class="close-button close-btn2">
+      <span class="fas fa-times"></span>
+    </div>
+  </div>
+
+
+  <script src="./assets/to-do-task/loadTask.js"></script>
+  <script src="./assets/to-do-task/storeTask.js"></script>
+  <script src="assets/main.js"></script>
+  <script src="./assets/name/storeName.js"></script>
+  <script src="./assets/custom-alert/alert.js"></script>
+</body>
+
+
 </html>

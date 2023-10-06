@@ -3,6 +3,12 @@ const form = document.querySelector("#new-task-form");
 const alert = $("#custAlert");
 const alertClose = $("#alertClose");
 
+// Close alert when close button is clicked
+$(".close-button").click(function () {
+  $(this).parent().removeClass("show");
+  $(this).parent().addClass("hide");
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -20,8 +26,4 @@ form.addEventListener("submit", (e) => {
     }, 5000);
     input.value = "";
   }
-  alertClose.click(function () {
-    alert.removeClass("show");
-    alert.addClass("hide");
-  });
 });
