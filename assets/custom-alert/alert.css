@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-.alert , .alertt,.alertd{
+.alert,
+.alertt,
+.alertd {
   padding: 20px 40px;
   min-width: 420px;
   position: absolute;
@@ -12,28 +14,32 @@
   pointer-events: none;
 }
 
-.alert{
+.alert {
   background: #ffdb9b;
   border-left: 8px solid #ffa502;
 }
 
-.alertt{
+.alertt {
   background: #7afc76;
   border-left: 8px solid #08da01;
 }
 
-.alertd{
+.alertd {
   background: #ff9160;
   border-left: 8px solid #ce0508;
 }
 
 
-.alert.showAlert ,.alertt.showAlert,.alertd.showAlert{
+.alert.showAlert,
+.alertt.showAlert,
+.alertd.showAlert {
   opacity: 1;
   pointer-events: auto;
 }
 
-.alert.show,.alertt.show ,.alertd.show {
+.alert.show,
+.alertt.show,
+.alertd.show {
   animation: show_slide 1s ease forwards;
 }
 
@@ -41,18 +47,23 @@
   0% {
     transform: translateX(100%);
   }
+
   40% {
     transform: translateX(-10%);
   }
+
   80% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-10px);
   }
 }
 
-.alert.hide,.alertt.hide,.alertd.hide {
+.alert.hide,
+.alertt.hide,
+.alertd.hide {
   animation: hide_slide 1s ease forwards;
 }
 
@@ -60,18 +71,23 @@
   0% {
     transform: translateX(-10px);
   }
+
   40% {
     transform: translateX(0%);
   }
+
   80% {
     transform: translateX(-10%);
   }
+
   100% {
     transform: translateX(100%);
   }
 }
 
-.alert .fa-exclamation-circle,.alertt .fa-check-circle,.alertd .fa-trash-alt {
+.alert .fa-exclamation-circle,
+.alertt .fa-check-circle,
+.alertd .fa-trash-alt {
   position: absolute;
   left: 20px;
   top: 50%;
@@ -79,36 +95,40 @@
   font-size: 30px;
 }
 
-.alert .fa-exclamation-circle{
+.alert .fa-exclamation-circle {
   color: #ce8500;
 }
 
-.alertt .fa-check-circle{
+.alertt .fa-check-circle {
   color: #068902;
 }
 
-.alertd .fa-trash-alt{
-  color:#910002
+.alertd .fa-trash-alt {
+  color: #910002
 }
 
-.alert .msg,.alertt .msgt,.alertd .msgd {
+.alert .msg,
+.alertt .msgt,
+.alertd .msgd {
   padding: 0 20px;
   font-size: 18px;
 }
 
-.alert .msg{
+.alert .msg {
   color: #ce8500;
 }
 
-.alertt .msgt{
+.alertt .msgt {
   color: #000000;
 }
 
-.alertd .msgd{
+.alertd .msgd {
   color: #570202;
 }
 
-.alert .close-btn,.alertt .close-btnt,.alertd .close-btnd {
+.alert .close-btn,
+.alertt .close-btnt,
+.alertd .close-btnd {
   position: absolute;
   right: 0px;
   top: 50%;
@@ -117,15 +137,15 @@
   cursor: pointer;
 }
 
-.alert .close-btn{
+.alert .close-btn {
   background: #ffd080;
 }
 
-.alertt .close-btnt{
+.alertt .close-btnt {
   background: #25e01f;
 }
 
-.alertd .close-btnd{
+.alertd .close-btnd {
   background: #ff2828;
 }
 
@@ -141,82 +161,84 @@
   background: #d44a18;
 }
 
-.alert .close-btn .fas,.alertt .close-btnt .fas,.alertd .close-btnd .fas {
+.alert .close-btn .fas,
+.alertt .close-btnt .fas,
+.alertd .close-btnd .fas {
   font-size: 22px;
   line-height: 40px;
 }
 
-.alert .close-btn .fas{
+.alert .close-btn .fas {
   color: #ce8500;
 }
 
-.alertt .close-btnt .fas{
+.alertt .close-btnt .fas {
   color: #056e01;
 }
 
-.alertd .close-btnd .fas{
+.alertd .close-btnd .fas {
   color: #9b2c0d;
 }
-.update {
-  background-color:#007bff ;
+
+.alerte {
+  background-color: #007bff;
   padding: 20px 40px;
   min-width: 420px;
   position: absolute;
   right: 0;
   top: 10px;
   border-radius: 4px;
-  border-left: 8px solid blue;
+  border-left: 8px solid #0068d6;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.update.showAlert {
+.alerte.showAlert {
   opacity: 1;
   pointer-events: auto;
 }
 
-.update.show {
+.alerte.show {
   animation: show_slide 1s ease forwards;
 }
 
-.update.hide {
+.alerte.hide {
   animation: hide_slide 1s ease forwards;
 }
 
-.update .fa-edit {
+.alerte .fa-edit {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(4, 4, 63);
-  /* color: white; */
+  color: #013f83;
   font-size: 30px;
 }
 
-.update .msgt {
+.alerte .msgt {
   background-color: #007bff;
   padding: 0 20px;
   font-size: 18px;
   color: #000000;
 }
 
-.update .close-btnt {
+.alerte .close-btnt {
   position: absolute;
   right: 0px;
   top: 50%;
   transform: translateY(-50%);
   padding: 20px 18px;
   cursor: pointer;
-  background-color:blue;
+  background-color: #0068d6;
 }
 
-.update .close-btnt:hover {
+.alerte .close-btnt:hover {
   background: rgba(50, 50, 206, 0.699);
 }
 
-.update .close-btnt .fas {
-  color: rgb(4, 4, 63);
+.alerte .close-btnt .fas {
+  color: #013f83;
   font-size: 22px;
   line-height: 40px;
 }
