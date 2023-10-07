@@ -7,7 +7,8 @@
 ![Platform support](https://img.shields.io/badge/Platform-Web-9cf)
 
 <!-- ![image](https://user-images.githubusercontent.com/66154908/210176617-efdbd6ec-66f2-4fd6-860e-569482b3b60f.png) -->
-![image](https://github.com/malivinayak/To-Do-Manager/assets/66154908/51307d5e-2863-439d-850c-746610d7d0dd)
+<!-- ![image](https://github.com/malivinayak/To-Do-Manager/assets/66154908/51307d5e-2863-439d-850c-746610d7d0dd) -->
+![Image](assets/Images/TodoManager.png)
 
 <hr>
 
