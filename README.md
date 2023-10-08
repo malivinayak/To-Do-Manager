@@ -73,9 +73,8 @@ To-Do-Manager is a web app used to maintain our day-to-day tasks or list everyth
 
 ## Contributors
 
-<a href="https://github.com/malivinayak/To-Do-Manager/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=malivinayak/To-Do-Manager" />
-</a>
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
 
 We thank all the contributors to this project, more contributors are welcome!
 
