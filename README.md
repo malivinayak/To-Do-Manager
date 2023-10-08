@@ -74,6 +74,66 @@ To-Do-Manager is a web app used to maintain our day-to-day tasks or list everyth
 ## Contributors
 
 <!-- readme: contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/malivinayak">
+            <img src="https://avatars.githubusercontent.com/u/66154908?v=4" width="100;" alt="malivinayak"/>
+            <br />
+            <sub><b>Vinayak Mali</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/GbCderr14">
+            <img src="https://avatars.githubusercontent.com/u/114488917?v=4" width="100;" alt="GbCderr14"/>
+            <br />
+            <sub><b>Gaurang Bhutani</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/amripandey">
+            <img src="https://avatars.githubusercontent.com/u/109029261?v=4" width="100;" alt="amripandey"/>
+            <br />
+            <sub><b>Amrit Pandey</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Mouli-3542">
+            <img src="https://avatars.githubusercontent.com/u/143725284?v=4" width="100;" alt="Mouli-3542"/>
+            <br />
+            <sub><b>Chandra Mouli</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/nikhilgarg26">
+            <img src="https://avatars.githubusercontent.com/u/116938919?v=4" width="100;" alt="nikhilgarg26"/>
+            <br />
+            <sub><b>Nikhil Garg</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/rahmlad-aramide">
+            <img src="https://avatars.githubusercontent.com/u/67334984?v=4" width="100;" alt="rahmlad-aramide"/>
+            <br />
+            <sub><b>Oladimeji Abdrahman Adebayo</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/vens8">
+            <img src="https://avatars.githubusercontent.com/u/55199947?v=4" width="100;" alt="vens8"/>
+            <br />
+            <sub><b>Rahul Maddula</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/RaviTejaVattem">
+            <img src="https://avatars.githubusercontent.com/u/43704759?v=4" width="100;" alt="RaviTejaVattem"/>
+            <br />
+            <sub><b>Null</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: contributors -end -->
 
 We thank all the contributors to this project, more contributors are welcome!
