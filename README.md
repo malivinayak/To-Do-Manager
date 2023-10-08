@@ -20,6 +20,7 @@
 - [Languages and Tools](#languages-and-tools)
 - [Directory Hierarchy](#directory-hierarchy)
 - [Author](#author)
+- [Contributors](#contributors)
 - [Contributing](#contributing)
 
 
@@ -69,6 +70,14 @@ To-Do-Manager is a web app used to maintain our day-to-day tasks or list everyth
 
 ## Author
 <b>Vinayak Mali (@malivinayak)</b>
+
+## Contributors
+
+<a href="https://github.com/malivinayak/To-Do-Manager/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=malivinayak/To-Do-Manager" />
+</a>
+
+We thank all the contributors to this project, more contributors are welcome!
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
